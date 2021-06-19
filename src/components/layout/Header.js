@@ -1,7 +1,7 @@
 import React from 'react';
-import AnchorLink from 'react-anchor-link-smooth-scroll';
-import LogoIcon from '../../svg/LogoIcon';
 import Button from '../Button';
+import LogoIcon from '../../svg/LogoIcon';
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 const Header = () => (
   <header className="sticky top-0 bg-white shadow">
@@ -10,7 +10,7 @@ const Header = () => (
         <div className="w-12 mr-3">
           <LogoIcon />
         </div>
-        Lander
+        Edu<b>Mine</b>
       </div>
       <div className="flex mt-4 sm:mt-0">
         <AnchorLink className="px-4" href="#features">
@@ -19,15 +19,11 @@ const Header = () => (
         <AnchorLink className="px-4" href="#services">
           Services
         </AnchorLink>
-        <AnchorLink className="px-4" href="#stats">
-          Stats
-        </AnchorLink>
-        <AnchorLink className="px-4" href="#testimonials">
-          Testimonials
-        </AnchorLink>
       </div>
       <div className="hidden md:block">
-        <Button className="text-sm">Start Free Trial</Button>
+        <AnchorLink href="#earlyAccess">
+          <Button className="text-sm">Register</Button>
+        </AnchorLink>
       </div>
     </div>
   </header>

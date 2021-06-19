@@ -1,34 +1,40 @@
 import React from 'react';
-import Button from '../components/Button';
+import Siphon from '../svg/Siphon';
+import Abigail from '../svg/Abigail';
 import Card from '../components/Card';
-import CustomerCard from '../components/CustomerCard';
-import LabelText from '../components/LabelText';
+import MathVsEng from '../svg/MathVsEng';
+import Button from '../components/Button';
+import GradesImage from '../svg/GradesImage';
 import Layout from '../components/layout/Layout';
 import SplitSection from '../components/SplitSection';
-import StatsBox from '../components/StatsBox';
-import customerData from '../data/customer-data';
-import HeroImage from '../svg/HeroImage';
-import SvgCharts from '../svg/SvgCharts';
+import EffectOfInternet from '../svg/EffectOfInternet';
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 const Index = () => (
   <Layout>
     <section className="pt-20 md:pt-40">
-      <div className="container mx-auto px-8 lg:flex">
-        <div className="text-center lg:text-left lg:w-1/2">
+      <div className="container mx-auto px-8 lg:flex gap-10">
+        <div
+          className="text-center lg:text-left lg:w-1/2"
+          style={{
+            marginBottom: '1.5rem',
+          }}
+        >
           <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold leading-none">
-            Main title of your landing page
+            Getting you closer to your students' life.
           </h1>
           <p className="text-xl lg:text-2xl mt-6 font-light">
-            Free landing page template to promote your business startup and generate leads for the
-            offered services
+            <b>EduMine</b> is a web application that takes in the academic and socio-demographic
+            data of students and uses smart algorithms to reach meaningful conclusions.
           </p>
           <p className="mt-8 md:mt-12">
-            <Button size="lg">Get Started</Button>
+            <AnchorLink href="#earlyAccess">
+              <Button size="lg">Register For Early Access</Button>
+            </AnchorLink>
           </p>
-          <p className="mt-4 text-gray-600">Sed fermentum felis ut cursu</p>
         </div>
-        <div className="lg:w-1/2">
-          <HeroImage />
+        <div className="lg:w-2/4">
+          <GradesImage />
         </div>
       </div>
     </section>
@@ -38,112 +44,148 @@ const Index = () => (
         <div className="flex flex-col sm:flex-row sm:-mx-3 mt-12">
           <div className="flex-1 px-3">
             <Card className="mb-8">
-              <p className="font-semibold text-xl">Service One</p>
-              <p className="mt-4">
-                An enim nullam tempor gravida donec enim ipsum blandit porta justo integer odio
-                velna vitae auctor integer.
-              </p>
+              <p className="font-semibold text-xl">Automatic Pattern Recognition</p>
             </Card>
           </div>
           <div className="flex-1 px-3">
             <Card className="mb-8">
-              <p className="font-semibold text-xl">Service Two</p>
-              <p className="mt-4">
-                An enim nullam tempor gravida donec enim ipsum blandit porta justo integer odio
-                velna vitae auctor integer.
-              </p>
+              <p className="font-semibold text-xl">Prediction Of Likely Outcomes</p>
             </Card>
           </div>
           <div className="flex-1 px-3">
             <Card className="mb-8">
-              <p className="font-semibold text-xl">Service Three</p>
-              <p className="mt-4">
-                An enim nullam tempor gravida donec enim ipsum blandit porta justo integer odio
-                velna vitae auctor integer.
-              </p>
+              <p className="font-semibold text-xl">Optimized Clustering</p>
             </Card>
           </div>
         </div>
       </div>
     </section>
+
+    <section className="py-20">
+      <div className="container mx-auto text-center">
+        <p className="font-light text-xl">
+          For the demonstration of the features listed above, we used sample data from various
+          schools. All the names listed below are hypothetical.
+        </p>
+      </div>
+    </section>
+
     <SplitSection
       id="services"
       primarySlot={
         <div className="lg:pr-32 xl:pr-48">
-          <h3 className="text-3xl font-semibold leading-tight">Market Analysis</h3>
+          <h3 className="text-4xl font-semibold leading-tight">Automatic Pattern Recognition</h3>
           <p className="mt-8 text-xl font-light leading-relaxed">
-            Our team of enthusiastic marketers will analyse and evaluate how your company stacks
-            against the closest competitors
+            One dot corresponds to one student. The horizontal axis represents the student’s average
+            and the vertical axis represents the time he/she spends on the internet per day. From
+            this graph we can deduce that the students represented by the blue dots have their
+            scores compromised by the extensive use of the internet.
           </p>
         </div>
       }
-      secondarySlot={<SvgCharts />}
+      secondarySlot={<EffectOfInternet />}
+    />
+    <div className="container mx-auto px-16 items-center">
+      <h3 className="text-4xl font-semibold leading-tight">Prediction Of Likely Outcomes</h3>
+      <p className="mt-8 text-xl font-light leading-relaxed">
+        The following are examples to show how the prediction feature of{' '}
+        <b
+          style={{
+            color: 'rgb(65, 153, 225)',
+          }}
+        >
+          EduMine
+        </b>{' '}
+        could be used.
+      </p>
+    </div>
+    <SplitSection
+      reverseOrder
+      primarySlot={
+        <div className="lg:pl-32 xl:pl-48">
+          <h3 className="text-3xl font-semibold leading-tight">Siphon Melese</h3>
+          <p className="mt-8 text-xl font-light leading-relaxed">
+            The application predicted Siphon’s 12th Grade score by using a smart machine learning
+            algorithm. By noting that she will{' '}
+            <b
+              style={{
+                color: 'rgb(65, 153, 225)',
+              }}
+            >
+              score low
+            </b>
+            , it tried to map the problem and present a solution by analyzing her socio-demographic
+            data.
+          </p>
+        </div>
+      }
+      secondarySlot={<Siphon />}
     />
     <SplitSection
       reverseOrder
       primarySlot={
         <div className="lg:pl-32 xl:pl-48">
-          <h3 className="text-3xl font-semibold leading-tight">
-            Design And Plan Your Business Growth Steps
-          </h3>
+          <h3 className="text-3xl font-semibold leading-tight">Abigail Million</h3>
           <p className="mt-8 text-xl font-light leading-relaxed">
-            Once the market analysis process is completed our staff will search for opportunities
-            that are in reach
+            The application predicted Abigail’s 12th Grade score by using a similar algorithm. By
+            noting that she will{' '}
+            <b
+              style={{
+                color: 'rgb(65, 153, 225)',
+              }}
+            >
+              score high
+            </b>
+            , the machine listed the factors responsible for her excellence.
           </p>
         </div>
       }
-      secondarySlot={<SvgCharts />}
+      secondarySlot={<Abigail />}
     />
     <SplitSection
       primarySlot={
         <div className="lg:pr-32 xl:pr-48">
-          <h3 className="text-3xl font-semibold leading-tight">
-            Search For Performance Optimization
-          </h3>
+          <h3 className="text-3xl font-semibold leading-tight">Optimized Clustering</h3>
           <p className="mt-8 text-xl font-light leading-relaxed">
-            With all the information in place you will be presented with an action plan that your
-            company needs to follow
+            The horizontal axis represents an entire high school’s English scores. The vertical axis
+            represents their math scores. The students represented by green dots have exceptional
+            math and English skills while the students represented by the purple dots need
+            assistance in those subjects.
           </p>
         </div>
       }
-      secondarySlot={<SvgCharts />}
+      secondarySlot={<MathVsEng />}
     />
-    <section id="stats" className="py-20 lg:pt-32">
-      <div className="container mx-auto text-center">
-        <LabelText className="text-gray-600">Our customers get results</LabelText>
-        <div className="flex flex-col sm:flex-row mt-8 lg:px-24">
-          <div className="w-full sm:w-1/3">
-            <StatsBox primaryText="+100%" secondaryText="Stats Information" />
-          </div>
-          <div className="w-full sm:w-1/3">
-            <StatsBox primaryText="+100%" secondaryText="Stats Information" />
-          </div>
-          <div className="w-full sm:w-1/3">
-            <StatsBox primaryText="+100%" secondaryText="Stats Information" />
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="testimonials" className="py-20 lg:py-40">
-      <div className="container mx-auto">
-        <LabelText className="mb-8 text-gray-600 text-center">What customers are saying</LabelText>
-        <div className="flex flex-col md:flex-row md:-mx-3">
-          {customerData.map(customer => (
-            <div key={customer.customerName} className="flex-1 px-3">
-              <CustomerCard customer={customer} />
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-    <section className="container mx-auto my-20 py-24 bg-gray-200 rounded-lg text-center">
-      <h3 className="text-5xl font-semibold">Ready to grow your business?</h3>
+    <section
+      id="earlyAccess"
+      className="container mx-auto my-20 py-24 bg-gray-200 rounded-lg text-center"
+    >
+      <h3 className="text-5xl font-semibold">Ready to know more about your students?</h3>
       <p className="mt-8 text-xl font-light">
-        Quis lectus nulla at volutpat diam ut. Enim lobortis scelerisque fermentum dui faucibus in.
+        If you register for the early access. You will get a free trial for <b>one month</b>.
       </p>
-      <p className="mt-8">
-        <Button size="xl">Get Started Now</Button>
-      </p>
+      <form>
+        <input
+          type="text"
+          className="rounded text-1xl p-5 m-5"
+          placeholder="Your school's name"
+          style={{
+            width: '80%',
+          }}
+        />
+        <br />
+        <input
+          type="number"
+          className="rounded text-1xl p-5 m-5"
+          placeholder="Your school's phone number"
+          style={{
+            width: '80%',
+          }}
+        />
+        <p className="mt-8">
+          <Button size="xl">Register For Early Access</Button>
+        </p>
+      </form>
     </section>
   </Layout>
 );
