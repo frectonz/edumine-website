@@ -4,11 +4,11 @@ import Abigail from '../svg/Abigail';
 import Card from '../components/Card';
 import MathVsEng from '../svg/MathVsEng';
 import Button from '../components/Button';
-import GradesImage from '../svg/GradesImage';
 import Layout from '../components/layout/Layout';
 import SplitSection from '../components/SplitSection';
 import EffectOfInternet from '../svg/EffectOfInternet';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
+import LogoIcon from '../svg/LogoIcon';
 
 const Index = () => (
   <Layout>
@@ -34,11 +34,11 @@ const Index = () => (
           </p>
         </div>
         <div className="lg:w-2/4">
-          <GradesImage />
+          <LogoIcon />
         </div>
       </div>
     </section>
-    <section id="features" className="py-20 lg:pb-40 lg:pt-48">
+    <section id="features" className="py-20 lg:pb-20 lg:pt-48">
       <div className="container mx-auto text-center">
         <h2 className="text-3xl lg:text-5xl font-semibold">Main Features</h2>
         <div className="flex flex-col sm:flex-row sm:-mx-3 mt-12">
@@ -61,8 +61,8 @@ const Index = () => (
       </div>
     </section>
 
-    <section className="py-20">
-      <div className="container mx-auto text-center">
+    <section className="py-10">
+      <div className="container mx-auto px-16 items-center container mx-auto text-center">
         <p className="font-light text-xl">
           For the demonstration of the features listed above, we used sample data from various
           schools. All the names listed below are hypothetical.
@@ -85,6 +85,7 @@ const Index = () => (
       }
       secondarySlot={<EffectOfInternet />}
     />
+
     <div className="container mx-auto px-16 items-center">
       <h3 className="text-4xl font-semibold leading-tight">Prediction Of Likely Outcomes</h3>
       <p className="mt-8 text-xl font-light leading-relaxed">
@@ -99,6 +100,7 @@ const Index = () => (
         could be used.
       </p>
     </div>
+
     <SplitSection
       reverseOrder
       primarySlot={
@@ -121,6 +123,7 @@ const Index = () => (
       }
       secondarySlot={<Siphon />}
     />
+
     <SplitSection
       reverseOrder
       primarySlot={
@@ -142,6 +145,7 @@ const Index = () => (
       }
       secondarySlot={<Abigail />}
     />
+
     <SplitSection
       primarySlot={
         <div className="lg:pr-32 xl:pr-48">
@@ -156,19 +160,21 @@ const Index = () => (
       }
       secondarySlot={<MathVsEng />}
     />
+
     <div className="container mx-auto px-16 items-center">
       <h3 className="text-3xl font-semibold leading-tight">Additionally, by</h3>
       <ul className="list-outside">
         <li className="mt-8 text-xl font-light leading-relaxed">
-          Mixing the <b>yellow dots</b> and the <b>green dots</b>, the green dots will help tutor
+          Mixing the <b>yellow dots</b> and the <b>green dots</b>, the green dots will help tutor.
           the yellow dots
         </li>
         <li className="mt-8 text-xl font-light leading-relaxed">
           Mixing the <b>blue dots</b> with the <b>purple dots</b>, a mutual benefit can be attained
-          as the weakness of ‘blue’ dots is the strength ‘purple’ dots and vise versa
+          as the weakness of blue dots is the strength of the purple dots and vise versa.
         </li>
       </ul>
     </div>
+
     <section
       id="earlyAccess"
       className="container mx-auto my-20 py-24 bg-gray-200 rounded-lg text-center"
