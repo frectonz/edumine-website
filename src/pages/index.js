@@ -156,6 +156,19 @@ const Index = () => (
       }
       secondarySlot={<MathVsEng />}
     />
+    <div className="container mx-auto px-16 items-center">
+      <h3 className="text-3xl font-semibold leading-tight">Additionally, by</h3>
+      <ul className="list-outside">
+        <li className="mt-8 text-xl font-light leading-relaxed">
+          Mixing the <b>yellow dots</b> and the <b>green dots</b>, the green dots will help tutor
+          the yellow dots
+        </li>
+        <li className="mt-8 text-xl font-light leading-relaxed">
+          Mixing the <b>blue dots</b> with the <b>purple dots</b>, a mutual benefit can be attained
+          as the weakness of ‘blue’ dots is the strength ‘purple’ dots and vise versa
+        </li>
+      </ul>
+    </div>
     <section
       id="earlyAccess"
       className="container mx-auto my-20 py-24 bg-gray-200 rounded-lg text-center"
