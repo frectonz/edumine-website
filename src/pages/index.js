@@ -10,6 +10,8 @@ import EffectOfInternet from '../svg/EffectOfInternet';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import LogoIcon from '../svg/LogoIcon';
 
+import '../styles/index.css';
+
 const Index = () => (
   <Layout>
     <section className="pt-20 md:pt-40">
@@ -65,7 +67,7 @@ const Index = () => (
       <div className="container mx-auto px-16 items-center container mx-auto text-center">
         <p className="font-light text-xl">
           For the demonstration of the features listed above, we used sample data from various
-          schools. All the names listed below are hypothetical.
+          schools. All the names listed below are changed for the sake of anonymity.
         </p>
       </div>
     </section>
@@ -80,6 +82,28 @@ const Index = () => (
             and the vertical axis represents the time he/she spends on the internet per day. From
             this graph we can deduce that the students represented by the blue dots have their
             scores compromised by the extensive use of the internet.
+          </p>
+          <h3 className="text-2 xl font-semibold leading-tight my-5">
+            Steps For Getting This Analysis
+          </h3>
+          <ul id="steps">
+            <li>Input internet usage data for 11th grade students</li>
+            <li>Preprocess the data for the clustering engine</li>
+            <li>Cluster the data the clustering engine</li>
+            <li>Plot the clustered data</li>
+          </ul>
+          <h3 className="text-2 xl font-semibold leading-tight mt-4">Deduction</h3>
+          <p className="mt-4 font-light leading-relaxed">
+            Students with high internet usage have low marks{' '}
+            <span style={{ color: '#1F77B4' }}>(Blue Dots)</span>.
+          </p>
+          <p className="mt-4 font-light leading-relaxed">
+            Students with moderate internet usage have moderate marks{' '}
+            <span style={{ color: '#FF7F0E' }}>(Yellow Dots)</span>.
+          </p>
+          <p className="mt-4 font-light leading-relaxed">
+            Students with low internet usage have high marks{' '}
+            <span style={{ color: '#2CA02C' }}>(Green Dots)</span>.
           </p>
         </div>
       }
@@ -118,6 +142,20 @@ const Index = () => (
             </b>
             , it tried to map the problem and present a solution by analyzing her socio-demographic
             data.
+          </p>
+          <h3 className="text-2 xl font-semibold leading-tight my-5">
+            Steps For Getting This Analysis
+          </h3>
+          <ul id="steps">
+            <li>Input internet usage data of a student</li>
+            <li>Input academic data of a student</li>
+            <li>Preprocess the data for the prediction engine</li>
+            <li>Get predicted outcome from the prediction engine</li>
+            <li>Plot the predicted data</li>
+          </ul>
+          <h3 className="text-2 xl font-semibold leading-tight mt-4">Deduction</h3>
+          <p className="mt-4 text-xl font-light leading-relaxed">
+            High internet usage might be affecting her score. Contact student or parent.
           </p>
         </div>
       }

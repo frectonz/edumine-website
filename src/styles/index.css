@@ -1,0 +1,6 @@
+#steps > li::before {
+  content: '🗸';
+  margin-right: 10px;
+  color: green;
+  font-size: 1.5rem;
+}
