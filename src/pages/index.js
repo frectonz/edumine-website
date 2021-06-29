@@ -221,7 +221,7 @@ const Index = () => (
       <p className="mt-8 text-xl font-light">
         If you register for the early access. You will get a free trial for <b>one month</b>.
       </p>
-      <form>
+      <form method="post" data-netlify="true" name="school">
         <input
           type="text"
           className="rounded text-1xl p-5 m-5"

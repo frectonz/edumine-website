@@ -1,5 +1,6 @@
 module.exports = {
   plugins: [
+    'gatsby-plugin-react-head',
     {
       resolve: `gatsby-theme-codebushi`,
       options: {

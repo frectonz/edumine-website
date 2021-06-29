@@ -15,7 +15,7 @@ const NotFound = () => (
           justifyContent: 'center',
         }}
       >
-        <Link href="/">
+        <Link to="/">
           <Button className="text-center">Go Back To Home</Button>
         </Link>
       </div>
