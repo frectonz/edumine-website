@@ -42,8 +42,8 @@ const Index = () => {
       },
       body: encode({
         'form-name': 'school',
-        schoolName: 'KMU',
-        schoolNumber: '09123232',
+        schoolName,
+        schoolNumber,
       }),
     })
       .then((data) => {
@@ -340,7 +340,7 @@ const Index = () => {
           {!submitted && (
             <>
               <h3 className="text-5xl font-semibold">Ready to know more about your students?</h3>
-              <form>
+              <form data-netlify="true">
                 {error && (
                   <p
                     style={{
@@ -350,9 +350,10 @@ const Index = () => {
                     Something went wrong, Please try again.
                   </p>
                 )}
+                <input type="hidden" name="form-name" value="school" />
                 <div>
                   <input
-                    type="text"
+                    type="number"
                     name="school_name"
                     className="rounded text-1xl p-5 m-5"
                     placeholder="Your school's name"
@@ -365,7 +366,7 @@ const Index = () => {
                 </div>
                 <div>
                   <input
-                    type="text"
+                    type="number"
                     name="school_number"
                     className="rounded text-1xl p-5 m-5"
                     placeholder="Your school's phone number"
