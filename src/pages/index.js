@@ -153,7 +153,7 @@ const Index = () => (
               <li>Input internet usage data of a student</li>
               <li>Input academic data of a student</li>
               <li>Preprocess the data for the prediction engine</li>
-              <li>Get predicted outcome from the prediction engine</li>
+              <li>Get the predicted outcome from the prediction engine</li>
               <li>Plot the predicted data</li>
             </ul>
             <h3 className="text-2 xl font-semibold leading-tight mt-4">Deduction</h3>
@@ -197,24 +197,97 @@ const Index = () => (
               exceptional math and English skills while the students represented by the purple dots
               need assistance in those subjects.
             </p>
+            <h3 className="text-2 xl font-semibold leading-tight my-5">
+              Steps For Getting This Analysis
+            </h3>
+            <ul id="steps">
+              <li>Input English average result of all students in the school</li>
+              <li>Input Math average result of all students in the school</li>
+              <li>Preprocess the data for the clustering engine</li>
+              <li>Get the clustered result from the clustering engine</li>
+              <li>Plot the clustered data</li>
+            </ul>
+            <h3 className="text-2 xl font-semibold leading-tight mt-4">Deduction</h3>
+            <p className="mt-4 text-xl font-light leading-relaxed">
+              The students represented by{' '}
+              <b
+                style={{
+                  color: '#2CA02C',
+                }}
+              >
+                green dots
+              </b>{' '}
+              have exceptional math and English skills.
+            </p>
+            <p className="mt-4 text-xl font-light leading-relaxed">
+              The students represented by the{' '}
+              <b
+                style={{
+                  color: '#9467BD',
+                }}
+              >
+                purple dots
+              </b>{' '}
+              need assistance in those subjects.
+            </p>
+            <p className="mt-4 text-xl font-light leading-relaxed">
+              Mixing the{' '}
+              <b
+                style={{
+                  color: '#FF7F0E',
+                }}
+              >
+                yellow dots
+              </b>{' '}
+              and the{' '}
+              <b
+                style={{
+                  color: '#2CA02C',
+                }}
+              >
+                green dots
+              </b>{' '}
+              , the green dots will help tutor the yellow dots.
+            </p>
+            <p className="mt-4 text-xl font-light leading-relaxed">
+              Mixing the{' '}
+              <b
+                style={{
+                  color: '#1F77B4',
+                }}
+              >
+                blue dots
+              </b>{' '}
+              with the{' '}
+              <b
+                style={{
+                  color: '#9467BD',
+                }}
+              >
+                purple dots
+              </b>{' '}
+              , a mutual benefit can be attained as the weakness of the{' '}
+              <b
+                style={{
+                  color: '#1F77B4',
+                }}
+              >
+                blue dots
+              </b>{' '}
+              is the strength of the{' '}
+              <b
+                style={{
+                  color: '#9467BD',
+                }}
+              >
+                purple dots
+              </b>{' '}
+              and vise versa
+            </p>
           </div>
         }
         secondarySlot={<MathVsEng />}
       />
-
-      <div className="container mx-auto px-16 items-center">
-        <h3 className="text-3xl font-semibold leading-tight">Additionally, by</h3>
-        <ul className="list-outside">
-          <li className="mt-8 text-xl font-light leading-relaxed">
-            Mixing the <b>yellow dots</b> and the <b>green dots</b>, the green dots will help tutor.
-            the yellow dots
-          </li>
-          <li className="mt-8 text-xl font-light leading-relaxed">
-            Mixing the <b>blue dots</b> with the <b>purple dots</b>, a mutual benefit can be
-            attained as the weakness of blue dots is the strength of the purple dots and vise versa.
-          </li>
-        </ul>
-      </div>
 
       <section
         id="earlyAccess"
@@ -233,6 +306,7 @@ const Index = () => (
               style={{
                 width: '80%',
               }}
+              required
             />
           </div>
           <div>
@@ -243,6 +317,7 @@ const Index = () => (
               style={{
                 width: '80%',
               }}
+              required
             />
           </div>
           <p className="mt-8">
