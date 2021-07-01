@@ -27,6 +27,14 @@ const Index = () => {
   const [error, setError] = useState(false);
 
   const handleFormSubmit = () => {
+    console.log(
+      encode({
+        'form-name': 'school',
+        school_name: schoolName,
+        school_number: schoolNumber,
+      })
+    );
+
     fetch('/', {
       method: 'POST',
       headers: {
@@ -38,10 +46,12 @@ const Index = () => {
         'school-number': schoolNumber,
       }),
     })
-      .then(() => {
+      .then((data) => {
+        console.log(data);
         setSubmitted(true);
       })
-      .catch(() => {
+      .catch((err) => {
+        console.log(err);
         setError(true);
       });
   };
