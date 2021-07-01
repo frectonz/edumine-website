@@ -42,8 +42,8 @@ const Index = () => {
       },
       body: encode({
         'form-name': 'school',
-        ...schoolName,
-        ...schoolNumber,
+        schoolName: 'KMU',
+        schoolNumber: '09123232',
       }),
     })
       .then((data) => {
