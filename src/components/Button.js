@@ -6,7 +6,7 @@ const sizes = {
   xl: `py-5 px-16 text-lg`,
 };
 
-const Button = ({ children, className = '', size, onClick }) => {
+const Button = ({ children, className = '', size }) => {
   return (
     <button
       type="button"
@@ -18,7 +18,6 @@ const Button = ({ children, className = '', size, onClick }) => {
         rounded
         text-white
     `}
-      onClick={onClick}
     >
       {children}
     </button>

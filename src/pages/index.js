@@ -14,48 +14,7 @@ import '../styles/index.css';
 
 import { HeadProvider, Title } from 'react-head';
 
-function encode(data) {
-  return Object.keys(data)
-    .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
-    .join('&');
-}
-
 const Index = () => {
-  const [schoolName, setSchoolName] = useState('');
-  const [schoolNumber, setSchoolNumber] = useState('');
-  const [submitted, setSubmitted] = useState(false);
-  const [error, setError] = useState(false);
-
-  const handleFormSubmit = () => {
-    console.log(
-      encode({
-        'form-name': 'school',
-        school_name: schoolName,
-        school_number: schoolNumber,
-      })
-    );
-
-    fetch('/', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/x-www-form-urlencoded',
-      },
-      body: encode({
-        'form-name': 'school',
-        schoolName,
-        schoolNumber,
-      }),
-    })
-      .then((data) => {
-        console.log(data);
-        setSubmitted(true);
-      })
-      .catch((err) => {
-        console.log(err);
-        setError(true);
-      });
-  };
-
   return (
     <HeadProvider headTags={[<Title>Hello world!</Title>]}>
       <Layout>
@@ -337,57 +296,39 @@ const Index = () => {
           id="earlyAccess"
           className="container mx-auto my-20 py-24 bg-gray-200 rounded-lg text-center"
         >
-          {!submitted && (
-            <>
-              <h3 className="text-5xl font-semibold">Ready to know more about your students?</h3>
-              <form data-netlify="true">
-                {error && (
-                  <p
-                    style={{
-                      color: 'red',
-                    }}
-                  >
-                    Something went wrong, Please try again.
-                  </p>
-                )}
-                <input type="hidden" name="form-name" value="school" />
-                <div>
-                  <input
-                    type="number"
-                    name="school_name"
-                    className="rounded text-1xl p-5 m-5"
-                    placeholder="Your school's name"
-                    style={{
-                      width: '80%',
-                    }}
-                    value={schoolName}
-                    onChange={(e) => setSchoolName(e.target.value)}
-                  />
-                </div>
-                <div>
-                  <input
-                    type="number"
-                    name="school_number"
-                    className="rounded text-1xl p-5 m-5"
-                    placeholder="Your school's phone number"
-                    style={{
-                      width: '80%',
-                    }}
-                    value={schoolNumber}
-                    onChange={(e) => setSchoolNumber(e.target.value)}
-                  />
-                </div>
-                <p className="mt-8">
-                  <Button size="xl" onClick={handleFormSubmit}>
-                    Register For Early Access
-                  </Button>
-                </p>
-              </form>
-            </>
-          )}
-          {submitted && (
-            <h1 className="text-5xl">Thanks, For Registering, We will Contact You Soon.</h1>
-          )}
+          <h3 className="text-5xl font-semibold">Ready to know more about your students?</h3>
+          <form name="school" method="POST" data-netlify="true">
+            <input type="hidden" name="form-name" value="school" />
+            <div>
+              <input
+                type="text"
+                name="schoolName"
+                className="rounded text-1xl p-5 m-5"
+                placeholder="Your school's name"
+                style={{
+                  width: '80%',
+                }}
+              />
+            </div>
+            <div>
+              <input
+                type="number"
+                name="schoolNumber"
+                className="rounded text-1xl p-5 m-5"
+                placeholder="Your school's phone number"
+                style={{
+                  width: '80%',
+                }}
+              />
+            </div>
+            <p className="mt-8">
+              <input
+                type="submit"
+                value="Register For Early Access"
+                className={'py-4 px-12 bg-primary hover:bg-primary-darker rounded  text-white'}
+              />
+            </p>
+          </form>
         </section>
       </Layout>
     </HeadProvider>
