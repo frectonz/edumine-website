@@ -14,11 +14,11 @@ import '../styles/index.css';
 
 import { HeadProvider, Title } from 'react-head';
 
-const encode = (data) => {
+function encode(data) {
   return Object.keys(data)
     .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
     .join('&');
-};
+}
 
 const Index = () => {
   const [schoolName, setSchoolName] = useState('');
@@ -42,8 +42,8 @@ const Index = () => {
       },
       body: encode({
         'form-name': 'school',
-        'school-name': schoolName,
-        'school-number': schoolNumber,
+        ...schoolName,
+        ...schoolNumber,
       }),
     })
       .then((data) => {
