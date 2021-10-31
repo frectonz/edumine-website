@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import Siphon from '../svg/Siphon';
 import Abigail from '../svg/Abigail';
 import Card from '../components/Card';
@@ -9,8 +8,6 @@ import SplitSection from '../components/SplitSection';
 import EffectOfInternet from '../svg/EffectOfInternet';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import LogoIcon from '../svg/LogoIcon';
-
-import '../styles/index.css';
 
 import { HeadProvider, Title } from 'react-head';
 
