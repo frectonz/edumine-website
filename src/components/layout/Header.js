@@ -1,6 +1,5 @@
 import React from 'react';
 import Button from '../Button';
-import LogoIcon from '../../svg/LogoIcon';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 const Header = () => (
