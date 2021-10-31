@@ -27,11 +27,12 @@ const Index = () => {
               }}
             >
               <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold leading-none">
-                Getting you closer to your students' life.
+                Smart student management system.
               </h1>
               <p className="text-xl lg:text-2xl mt-6 font-light">
-                <b>EduMine</b> is a web application that takes in the academic and socio-demographic
-                data of students and uses smart algorithms to reach meaningful conclusions.
+                We are a data-driven, school-centric web and app development company. We are
+                obsessed with employing Data- Science in educational sectors. Expunging their
+                defects through responsive, smart, and sustainable technology.
               </p>
               <p className="mt-8 md:mt-12">
                 <AnchorLink href="#earlyAccess">
@@ -329,6 +330,29 @@ const Index = () => {
               />
             </p>
           </form>
+        </section>
+
+        <section id="features" className="py-20 lg:pb-20 lg:pt-48">
+          <div className="container mx-auto text-center">
+            <h2 className="text-3xl lg:text-5xl font-semibold">THE EDUMINE TEAM</h2>
+            <div className="flex flex-col sm:flex-row sm:-mx-3 mt-12">
+              <div className="flex-1 px-3">
+                <Card className="mb-8">
+                  <p className="font-semibold text-xl">Nebyu Elias</p>
+                </Card>
+              </div>
+              <div className="flex-1 px-3">
+                <Card className="mb-8">
+                  <p className="font-semibold text-xl">Fraol Lemecha</p>
+                </Card>
+              </div>
+              <div className="flex-1 px-3">
+                <Card className="mb-8">
+                  <p className="font-semibold text-xl">Muferiha Ahmed</p>
+                </Card>
+              </div>
+            </div>
+          </div>
         </section>
       </Layout>
     </HeadProvider>
