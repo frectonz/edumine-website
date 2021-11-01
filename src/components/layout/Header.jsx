@@ -18,7 +18,7 @@ const Header = () => (
           Services
         </AnchorLink>
         <AnchorLink className="px-4" href="#meetTheTeam">
-          Meet the Team
+          Team
         </AnchorLink>
       </div>
       <div className="md:block">
