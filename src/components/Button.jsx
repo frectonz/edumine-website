@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const sizes = {
   default: `py-3 px-8`,
@@ -6,18 +6,19 @@ const sizes = {
   xl: `py-5 px-16 text-lg`,
 };
 
-const Button = ({ children, className = '', size }) => {
+const Button = ({ children, className = "", size }) => {
   return (
     <button
       type="button"
       className={`
         ${sizes[size] || sizes.default}
         ${className}
-        bg-primary
-        hover:bg-primary-darker
         rounded
         text-white
     `}
+      style={{
+        backgroundColor: "rgb(51, 123, 230)",
+      }}
     >
       {children}
     </button>

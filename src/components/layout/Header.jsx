@@ -1,6 +1,8 @@
-import React from 'react';
-import Button from '../Button';
-import AnchorLink from 'react-anchor-link-smooth-scroll';
+import React from "react";
+import AnchorLink from "react-anchor-link-smooth-scroll";
+
+// Components
+import Button from "../Button";
 
 const Header = () => (
   <header className="sticky top-0 bg-white shadow">
@@ -15,8 +17,11 @@ const Header = () => (
         <AnchorLink className="px-4" href="#services">
           Services
         </AnchorLink>
+        <AnchorLink className="px-4" href="#meetTheTeam">
+          Meet the Team
+        </AnchorLink>
       </div>
-      <div className="hidden md:block">
+      <div className="md:block">
         <AnchorLink href="#earlyAccess">
           <Button className="text-sm">Register</Button>
         </AnchorLink>

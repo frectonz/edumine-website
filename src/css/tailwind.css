@@ -1,12 +1,23 @@
 @tailwind base;
-
-a {
-  @apply text-primary;
-}
-a:hover {
-  @apply text-primary-darker;
-}
-
+@tailwind utilities;
 @tailwind components;
 
-@tailwind utilities;
+a {
+  color: rgb(51, 123, 230);
+}
+
+a:hover {
+  color: black;
+}
+
+.person {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.person > img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
