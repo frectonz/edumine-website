@@ -5,13 +5,13 @@ const SplitSection = ({ id, primarySlot, secondarySlot, reverseOrder }) => (
     <div className="container mx-auto grid grid-cols-1 gap-8 lg:grid-cols-2">
       {reverseOrder === true ? (
         <>
-          <div>{secondarySlot}</div>
-          <div>{primarySlot}</div>
+          <div className="p-4">{secondarySlot}</div>
+          <div className="p-4">{primarySlot}</div>
         </>
       ) : (
         <>
-          <div>{primarySlot}</div>
-          <div>{secondarySlot}</div>
+          <div className="p-4">{primarySlot}</div>
+          <div className="p-4">{secondarySlot}</div>
         </>
       )}
     </div>

@@ -21,7 +21,7 @@ const Header = () => (
           Team
         </AnchorLink>
       </div>
-      <div className="md:block">
+      <div className="md:block my-2">
         <AnchorLink href="#earlyAccess">
           <Button className="text-sm">Register</Button>
         </AnchorLink>

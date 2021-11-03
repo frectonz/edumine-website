@@ -2,27 +2,25 @@ import React from "react";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 
 // Components
-import Card from "../components/Card";
 import Button from "../components/Button";
 import Layout from "../components/layout/Layout";
-import ContactForm from "../components/ContactForm";
 import SplitSection from "../components/SplitSection";
 
 // Svgs
-import Ai from "../assets/Ai.svg";
-import Goal from "../assets/Goal.svg";
 import LogoIcon from "../svg/LogoIcon";
-import Future from "../assets/Future.svg";
-import Cluster from "../assets/Cluster.svg";
 
 // PNGs
 import edumine1 from "../assets/edumine1.png";
 import edumine2 from "../assets/edumine2.png";
 import edumine3 from "../assets/edumine3.png";
 
-import fraol from "../assets/team/fraol.webp";
-import nebiyu from "../assets/team/nebiyu.png";
-import muferiha from "../assets/team/muferiha.png";
+import versamel1 from "../assets/versamel1.png";
+import versamel2 from "../assets/versamel2.png";
+
+// Sections
+import Team from "../sections/Team";
+import Features from "../sections/Features";
+import ContactForm from "../sections/ContactForm";
 
 const IndexPage = () => {
   return (
@@ -52,63 +50,11 @@ const IndexPage = () => {
           </div>
         </section>
 
-        <section id="features" className="py-20 lg:pb-20 lg:pt-48">
-          <div className="container mx-auto text-center">
-            <h2 className="text-3xl lg:text-5xl font-semibold">
-              Main Features
-            </h2>
-            <div className="grid xl:grid-cols-4  md:grid-cols-2 sm:lg:grid-cols-1 gap-4 mt-12">
-              <div className="px-3">
-                <Card className="mb-8">
-                  <div className="my-2">
-                    <Ai />
-                  </div>
-                  <p className="font-semibold text-xl">
-                    Applies the fields of AI and Machine Learning to mine
-                    students' data
-                  </p>
-                </Card>
-              </div>
-              <div className="px-3">
-                <Card className="mb-8">
-                  <div className="my-2">
-                    <Future />
-                  </div>
-                  <p className="font-semibold text-xl">
-                    Predicts students future scores by analyzing their past
-                    academic milestones.
-                  </p>
-                </Card>
-              </div>
-              <div className="px-3">
-                <Card className="mb-8">
-                  <div className="my-2">
-                    <Goal />
-                  </div>
-                  <p className="font-semibold text-xl">
-                    Associates students with common interests, talents and goals
-                    from different schools.
-                  </p>
-                </Card>
-              </div>
-              <div className="px-3">
-                <Card className="mb-8">
-                  <div className="my-2">
-                    <Cluster />
-                  </div>
-                  <p className="font-semibold text-xl">
-                    Clusters symbiotic groups based off of their academic and
-                    socio-demographic Data.
-                  </p>
-                </Card>
-              </div>
-            </div>
-          </div>
-        </section>
+        <Features />
 
         <section id="services" className="py-10">
           <div className="container mx-auto px-16 items-center container mx-auto text-center">
-            <p className="font-light text-xl">A description of EduMine</p>
+            <h1 className="font-light text-2xl">Features of EduMine</h1>
           </div>
         </section>
 
@@ -139,14 +85,15 @@ const IndexPage = () => {
         />
 
         <SplitSection
-          reverseOrder
           primarySlot={
             <div>
               <h3 className="text-4xl font-semibold leading-tight">
                 Prediction
               </h3>
               <p className="mt-8 text-xl font-light leading-relaxed">
-                Uses smart algorithms to analyze and provide readable data.
+                Uses smart algorithms to analyze and provide readable data. The
+                prediction of the future scores of a student by analyzing his
+                past data (academic and socio-demographic).
               </p>
             </div>
           }
@@ -166,7 +113,8 @@ const IndexPage = () => {
               </h3>
               <p className="mt-8 text-xl font-light leading-relaxed">
                 Uses smart algorithms to cluster students and provide
-                graph-backed analysis.
+                graph-backed analysis. Grouping of symbiotic students based on
+                their academic and socio-demographic data.
               </p>
             </div>
           }
@@ -178,43 +126,76 @@ const IndexPage = () => {
           }
         />
 
-        <section id="meetTheTeam" className="py-20 lg:pb-20 lg:pt-48">
-          <div className="container mx-auto text-center">
-            <h2 className="text-3xl lg:text-5xl font-semibold">
-              THE EDUMINE TEAM
-            </h2>
-            <div className="flex flex-col md:flex-row sm:-mx-3 mt-12">
-              <div className="flex-1 px-3">
-                <Card className="mb-8">
-                  <div className="person my-4 flex">
-                    <img src={nebiyu} alt="Nebyu Elias" />
-                  </div>
-                  <p className="font-semibold text-xl">Nebyu Elias</p>
-                  <b>CEO</b>
-                </Card>
-              </div>
-              <div className="flex-1 px-3">
-                <Card className="mb-8">
-                  <div className="person my-4 flex">
-                    <img src={fraol} alt="Fraol Lemecha" />
-                  </div>
-                  <p className="font-semibold text-xl">Fraol Lemecha</p>
-                  <b>CTO</b>
-                </Card>
-              </div>
-              <div className="flex-1 px-3">
-                <Card className="mb-8">
-                  <div className="person my-4 flex">
-                    <img src={muferiha} alt="Muferiha Ahmed" />
-                  </div>
-                  <p className="font-semibold text-xl">Muferiha Ahmed</p>
-                  <b>CFO</b>
-                </Card>
-              </div>
+        <SplitSection
+          primarySlot={
+            <div>
+              <h3 className="text-4xl font-semibold leading-tight">
+                Smart Algorithmic Analysis
+              </h3>
+              <p className="mt-8 text-xl font-light leading-relaxed">
+                Once EduMine is equipped with data, it will display an
+                introspective analytic view of each class/section and employ two
+                widely used algorithms in Artificial Intelligence on the data:
+                Prediction and Clustering.
+              </p>
             </div>
-          </div>
-        </section>
+          }
+          secondarySlot={
+            <img
+              src={edumine1}
+              alt="Versamel open showing a list of students"
+            />
+          }
+        />
 
+        <SplitSection
+          primarySlot={
+            <div>
+              <h3 className="text-4xl font-semibold leading-tight">
+                Storage Unit
+              </h3>
+              <p className="mt-8 text-xl font-light leading-relaxed">
+                EduMine comes with Versamel, a software developed by our
+                company. Versamel is a simple, intuitive, and smart data
+                collection tool made for schools. It encodes a student's
+                sociodemographic and academic data on excel sheets.
+              </p>
+            </div>
+          }
+          secondarySlot={
+            <img
+              src={versamel1}
+              alt="Versamel open showing a list of students"
+            />
+          }
+        />
+
+        <SplitSection
+          primarySlot={
+            <div>
+              <h3 className="text-4xl font-semibold leading-tight">
+                Computerizes the clerical jobs
+              </h3>
+              <ul className="list-disc p-8 text-xl font-light leading-relaxed">
+                <li>Financial management system</li>
+                <li>Student navigation</li>
+                <li>Attendance tracker (For students and teachers)</li>
+                <li>Teacher evaluation system (Student based)</li>
+                <li>
+                  Teacher management system Certificate and Roster publisher
+                </li>
+              </ul>
+            </div>
+          }
+          secondarySlot={
+            <img
+              src={versamel2}
+              alt="Versamel open showing a list of students"
+            />
+          }
+        />
+
+        <Team />
         <ContactForm />
       </Layout>
     </>
