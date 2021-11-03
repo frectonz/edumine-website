@@ -8,7 +8,9 @@ const Header = () => (
   <header className="sticky top-0 bg-white shadow">
     <div className="container flex flex-col sm:flex-row justify-between items-center mx-auto py-4 px-8">
       <div className="flex items-center text-2xl">
-        Edu<b>Mine</b>
+        <AnchorLink className="px-4" href="#headline">
+          Edu<b>Mine</b>
+        </AnchorLink>
       </div>
       <div className="flex mt-4 sm:mt-0">
         <AnchorLink className="px-4" href="#features">

@@ -26,7 +26,7 @@ const IndexPage = () => {
   return (
     <>
       <Layout>
-        <section className="pt-20 md:pt-40">
+        <section id="headline" className="pt-20 md:pt-40">
           <div className="container mx-auto px-8 lg:flex gap-10">
             <div className="text-center lg:text-left lg:w-1/2">
               <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold leading-none">
