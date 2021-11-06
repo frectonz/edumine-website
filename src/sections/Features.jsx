@@ -4,10 +4,10 @@ import React from "react";
 import Card from "../components/Card";
 
 // Svgs
-import Ai from "../assets/Ai.svg";
-import Goal from "../assets/Goal.svg";
-import Future from "../assets/Future.svg";
-import Cluster from "../assets/Cluster.svg";
+import Ai from "../assets/svgs/Ai.svg";
+import Goal from "../assets/svgs/Goal.svg";
+import Future from "../assets/svgs/Future.svg";
+import Cluster from "../assets/svgs/Cluster.svg";
 
 export default function Features() {
   return (
@@ -18,7 +18,7 @@ export default function Features() {
           <div className="px-3">
             <Card className="mb-8">
               <div className="my-2">
-                <Ai />
+                <Ai className="w-40 mx-auto" />
               </div>
               <p className="font-semibold text-xl">
                 Applies the fields of AI and Machine Learning to mine students'
@@ -29,7 +29,7 @@ export default function Features() {
           <div className="px-3">
             <Card className="mb-8">
               <div className="my-2">
-                <Future />
+                <Future className="w-40 mx-auto" />
               </div>
               <p className="font-semibold text-xl">
                 Predicts students future scores by analyzing their past academic
@@ -40,7 +40,7 @@ export default function Features() {
           <div className="px-3">
             <Card className="mb-8">
               <div className="my-2">
-                <Goal />
+                <Goal className="w-40 mx-auto" />
               </div>
               <p className="font-semibold text-xl">
                 Associates students with common interests, talents and goals
@@ -51,7 +51,7 @@ export default function Features() {
           <div className="px-3">
             <Card className="mb-8">
               <div className="my-2">
-                <Cluster />
+                <Cluster className="w-40 mx-auto" />
               </div>
               <p className="font-semibold text-xl">
                 Clusters symbiotic groups based off of their academic and

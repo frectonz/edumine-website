@@ -7,15 +7,15 @@ import Layout from "../components/layout/Layout";
 import SplitSection from "../components/SplitSection";
 
 // Svgs
-import LogoIcon from "../svg/LogoIcon";
+import LogoIcon from "../assets/svgs/Logo.svg";
 
 // PNGs
-import edumine1 from "../assets/edumine1.png";
-import edumine2 from "../assets/edumine2.png";
-import edumine3 from "../assets/edumine3.png";
+import edumine1 from "../assets/showcase/edumine1.png";
+import edumine2 from "../assets/showcase/edumine2.png";
+import edumine3 from "../assets/showcase/edumine3.png";
 
-import versamel1 from "../assets/versamel1.png";
-import versamel2 from "../assets/versamel2.png";
+import versamel1 from "../assets/showcase/versamel1.png";
+import versamel2 from "../assets/showcase/versamel2.png";
 
 // Sections
 import Team from "../sections/Team";
