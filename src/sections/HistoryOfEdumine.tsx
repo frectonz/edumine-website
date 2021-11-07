@@ -14,7 +14,7 @@ export default function HistoryOfEdumine() {
           <Timeline heading="Founded in 2019" />
           <Timeline
             reverse
-            heading="Taking part in the first batch of startup incubation organized by KOICA and MinT"
+            heading="The first to inaugurate the EduMeter project in collaboration with MinT and KOICA."
           />
         </div>
       </div>
