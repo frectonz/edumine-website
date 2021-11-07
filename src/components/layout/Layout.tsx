@@ -5,7 +5,7 @@ import Head from "./Head";
 import Footer from "./Footer";
 import Header from "./Header";
 
-const Layout = ({ children }) => {
+export default function Layout({ children }) {
   return (
     <>
       <Head />
@@ -14,6 +14,4 @@ const Layout = ({ children }) => {
       <Footer />
     </>
   );
-};
-
-export default Layout;
+}

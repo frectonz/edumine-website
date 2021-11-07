@@ -5,7 +5,7 @@ import SingleTimeline from "../components/Timeline";
 
 export default function HistoryOfEdumine() {
   return (
-    <section className="py-20 lg:pb-20 lg:pt-48">
+    <section id="history" className="py-20 lg:pb-20 lg:pt-48">
       <div className="container mx-auto">
         <h2 className="text-center text-3xl lg:text-5xl font-semibold py-10">
           About EduMine Technologies

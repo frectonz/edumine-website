@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ReactNode } from "react";
 
 const sizes = {
   default: `py-3 px-8`,
@@ -6,7 +6,17 @@ const sizes = {
   xl: `py-5 px-16 text-lg`,
 };
 
-const Button = ({ children, className = "", size }) => {
+interface ButtonProps {
+  className?: string;
+  children: ReactNode;
+  size?: keyof typeof sizes;
+}
+
+export default function Button({
+  size,
+  children,
+  className = "",
+}: ButtonProps) {
   return (
     <button
       type="button"
@@ -23,6 +33,4 @@ const Button = ({ children, className = "", size }) => {
       {children}
     </button>
   );
-};
-
-export default Button;
+}
