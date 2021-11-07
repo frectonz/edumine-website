@@ -20,8 +20,8 @@ import versamel2 from "../assets/showcase/versamel2.png";
 // Sections
 import Team from "../sections/Team";
 import Features from "../sections/Features";
-import Timeline from "../components/Timeline";
 import ContactForm from "../sections/ContactForm";
+import HistoryOfEdumine from "../sections/HistoryOfEdumine";
 
 const IndexPage = () => {
   return (
@@ -176,7 +176,7 @@ const IndexPage = () => {
         }
       />
 
-      <Timeline />
+      <HistoryOfEdumine />
       <Team />
       <ContactForm />
     </Layout>
