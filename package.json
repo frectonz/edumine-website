@@ -1,13 +1,19 @@
 {
   "name": "edumine-website",
   "author": "Fraol Lemecha",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "scripts": {
-    "develop": "gatsby develop",
+    "type": "tsc",
     "build": "gatsby build",
-    "clean": "gatsby clean"
+    "clean": "gatsby clean",
+    "develop": "gatsby develop"
   },
   "dependencies": {
+    "@types/node": "^16.11.6",
+    "@types/react": "^17.0.34",
+    "@types/react-anchor-link-smooth-scroll": "^1.0.2",
+    "@types/react-dom": "^17.0.11",
+    "@types/react-helmet": "^6.1.4",
     "autoprefixer": "^10.4.0",
     "gatsby": "^4.0.2",
     "gatsby-plugin-postcss": "^5.0.0",
@@ -18,7 +24,8 @@
     "react-anchor-link-smooth-scroll": "^1.0.12",
     "react-dom": "^17.0.2",
     "react-helmet": "^6.1.0",
-    "tailwindcss": "^2.2.19"
+    "tailwindcss": "^2.2.19",
+    "typescript": "^4.4.4"
   },
   "devDependencies": {}
 }

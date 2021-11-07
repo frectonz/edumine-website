@@ -17,9 +17,6 @@ export default function Header() {
           <AnchorLink className="px-4" href="#features">
             Features
           </AnchorLink>
-          <AnchorLink className="px-4" href="#services">
-            Services
-          </AnchorLink>
           <AnchorLink className="px-4" href="#meetTheTeam">
             Team
           </AnchorLink>

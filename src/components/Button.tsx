@@ -13,7 +13,7 @@ interface ButtonProps {
 }
 
 export default function Button({
-  size,
+  size = "default",
   children,
   className = "",
 }: ButtonProps) {
@@ -21,7 +21,7 @@ export default function Button({
     <button
       type="button"
       className={`
-        ${sizes[size] || sizes.default}
+        ${sizes[size]}
         ${className}
         rounded
         text-white
