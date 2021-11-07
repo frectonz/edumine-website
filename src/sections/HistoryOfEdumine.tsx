@@ -1,7 +1,7 @@
 import React from "react";
 
 // Components
-import SingleTimeline from "../components/Timeline";
+import Timeline from "../components/Timeline";
 
 export default function HistoryOfEdumine() {
   return (
@@ -11,11 +11,11 @@ export default function HistoryOfEdumine() {
           About EduMine Technologies
         </h2>
         <div className="flex flex-col md:grid grid-cols-9 mx-auto p-2 text-blue-50">
-          <SingleTimeline
+          <Timeline heading="Founded in 2019" />
+          <Timeline
             reverse
             heading="Taking part in the first batch of startup incubation organized by KOICA and MinT"
           />
-          <SingleTimeline heading="Founded in 2019" />
         </div>
       </div>
     </section>

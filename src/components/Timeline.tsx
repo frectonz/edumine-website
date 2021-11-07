@@ -23,7 +23,7 @@ function Circle() {
   );
 }
 
-interface SingleTimelineProps {
+interface TimelineProps {
   reverse?: boolean;
   heading: string;
   text?: string;
@@ -33,32 +33,28 @@ export default function SingleTimeline({
   text,
   heading,
   reverse = false,
-}: SingleTimelineProps) {
-  if (reverse) {
-    return (
-      <div className="flex flex-row-reverse md:contents">
-        <div className="bg-blue-500 col-start-1 col-end-5 p-4 rounded-xl my-4 ml-auto shadow-md">
-          <h3 className="font-semibold text-lg mb-1">{heading}</h3>
-          <p className="leading-tight text-justify">{text}</p>
-        </div>
-        <div className="col-start-5 col-end-6 md:mx-auto relative mr-10">
-          <Line />
-          <Circle />
-        </div>
+}: TimelineProps) {
+  return reverse ? (
+    <div className="flex flex-row-reverse md:contents">
+      <div className="bg-blue-500 col-start-1 col-end-5 p-4 rounded-xl my-4 ml-auto shadow-md">
+        <h3 className="font-semibold text-lg mb-1">{heading}</h3>
+        <p className="leading-tight text-justify">{text}</p>
       </div>
-    );
-  } else {
-    return (
-      <div className="flex md:contents">
-        <div className="col-start-5 col-end-6 mr-10 md:mx-auto relative">
-          <Line />
-          <Circle />
-        </div>
-        <div className="bg-blue-500 col-start-6 col-end-10 p-4 rounded-xl my-4 mr-auto shadow-md">
-          <h3 className="font-semibold text-lg mb-1">{heading}</h3>
-          <p className="leading-tight text-justify">{text}</p>
-        </div>
+      <div className="col-start-5 col-end-6 md:mx-auto relative mr-10">
+        <Line />
+        <Circle />
       </div>
-    );
-  }
+    </div>
+  ) : (
+    <div className="flex md:contents">
+      <div className="col-start-5 col-end-6 mr-10 md:mx-auto relative">
+        <Line />
+        <Circle />
+      </div>
+      <div className="bg-blue-500 col-start-6 col-end-10 p-4 rounded-xl my-4 mr-auto shadow-md">
+        <h3 className="font-semibold text-lg mb-1">{heading}</h3>
+        <p className="leading-tight text-justify">{text}</p>
+      </div>
+    </div>
+  );
 }
